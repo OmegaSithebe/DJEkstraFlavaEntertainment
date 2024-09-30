@@ -7,3 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  // Scroll darkness affect
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    const scrollThreshold = 100;  
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  const scrollThreshold = 1;

@@ -1,39 +1,44 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  body, html {
-    height: 100%0;
-    background-color: #000000;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
-  header {
-    position: relative;
-    background: url('images/dj\ exstra\ flava\ home\ background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-  header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darker overlay */
-    z-index: 1;
-  }
+body, html {
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  background: 
+    url('images/dj exstra flava home background.jpg') center center/cover no-repeat,
+    radial-gradient(circle, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 85%);
+  background-blend-mode: overlay;
+  filter: brightness(1.2); 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  transition: background 0.5s ease, filter 0.5s ease;
+}
+s
+header.scrolled {
+  background: 
+    url('images/dj exstra flava home background.jpg') center center/cover no-repeat,
+    radial-gradient(circle, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 1) 100%);
+  background-blend-mode: overlay;
+  filter: brightness(0.7); 
+  transition: background 0.5s ease, filter 0.5s ease;
+}
+
+
 
   .logo {
     position: absolute;
@@ -191,7 +196,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
     z-index: 1;
     transition: background 0.3s ease-in-out;
   }
@@ -236,21 +241,63 @@
   .gallery-grid img {
     width: 30%;
     border-radius: 8px;
+    height: 500px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .contact-details {
+    width: 45%;
+    color: #fff;
+  }
+  
+  .contact-details p {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  
+  .map {
+    margin-top: 20px;
   }
   
   .contact form {
+    margin-top: 80px;
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
   .contact form input, .contact form textarea {
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     border: none;
-    width: 50%;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .contact form button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px; /* Adjust the size of the button */
     margin: 0 auto;
   }
+  
+  .contact form button:hover {
+    background-color: #ff4b4b;
+  }
+  
   
   footer {
     padding: 20px;
