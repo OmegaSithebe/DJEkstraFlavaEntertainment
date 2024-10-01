@@ -25,14 +25,14 @@
 
   <!-- About Section -->
 <section id="about" class="about">
-  <h2 class="top__headings">About:</h2>
+  <h2 class="top__headings">About Exstra Flava:</h2>
   <div class="about-container">
       <div class="about-content">
         <p>DJ Ekstra Flava offers top-tier entertainment, technical production, and event management services for corporate, private, and public events. With over 20 years of experience, we bring the best in sound, visuals, and performances to make your event unforgettable.  <br>
           Starting out as a DJ at around 14 or 15 years old, I began by playing at birthday parties and school events. This led to my involvement in promotions and performances for major brands like Surf, Colgate, Coca-Cola, and SAB on roadshows. I also built a local following by performing in neighborhood taverns and pubs. After high school, I fully immersed myself in the entertainment industry, working as a sound and audiovisual technician. I advanced to Sales and Event Management at Eventpro, one of South Africa's largest production companies, and freelanced for other top production companies such as MEG Productions, On-Cue Productions, and Sound Level Media. Through this journey, I have crafted unforgettable experiences for events across the country.</p>
       </div>
       <div class="about-image">
-          <img src="images/DJ exstra flava on set hands on.jpeg" alt="DJ Ekstra Flava" />
+          <img src="images/DJ exstra flava on set hands on.jpg" alt="DJ Ekstra Flava" />
       </div>
       
   </div>
@@ -42,15 +42,15 @@
 <section id="services" class="services">
   <h2>Services:</h2>
   <div class="service-list">
-    <div class="service-item" style="background-image: url('images/wedding\ evernts.png');">
+    <div class="service-item" style="background-image: url('images/wedding\ evernts.jpg');">
       <h3>Professional DJ Services</h3>
       <p>Events, Parties, Weddings, Corporate Functions, and more.</p>
     </div>
-    <div class="service-item" style="background-image: url('images/Technical\ Services.jpeg');">
+    <div class="service-item" style="background-image: url('images/Technical\ Services.png');">
       <h3>Technical Services</h3>
       <p>PA/Sound system hire, staging, and more.</p>
     </div>
-    <div class="service-item" style="background-image: url('images/Lights\ &\ effects.jpeg');">
+    <div class="service-item" style="background-image: url('images/Lights\ &\ effects.jpg');">
       <h3>Lighting & Effects</h3>
       <p>Dance floors, decorations, and special lighting setups.</p>
     </div>
@@ -93,10 +93,10 @@
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="images/DJ exstra flava gallary.jpeg" alt="Event 1">
-      <img src="images/DJ exstra flava gallary 2.jpeg" alt="Event 2">
+      <img src="images/DJ exstra flava gallary.jpg" alt="Event 1">
+      <img src="images/DJ exstra flava gallary 2.jpg" alt="Event 2">
       <img src="images/DJ exstra flava gallary 8.jpg" alt="Event 3">
-      <img src="images/Dj exstra flava gallary 9.jpeg" alt="Event 4">
+      <img src="images/Dj exstra flava gallary 9.png" alt="Event 4">
     </div>
   </section>
 
@@ -142,29 +142,17 @@
   <script src="apps.js"></script>
 
   <script>
-    // Ensuring script runs after DOM has loaded
     document.addEventListener('DOMContentLoaded', function () {
       const header = document.querySelector('header');
-  
-      // Debugging: Check if the header element is found
-      if (!header) {
-        console.log("Header element not found.");
-      } else {
-        console.log("Header element found.");
-      }
-  
-      // Add event listener for scroll
+      const hero = document.querySelector('.hero');
+
       window.addEventListener('scroll', function () {
         const scrollThreshold = 100;  // Scroll threshold for the effect
         
-        console.log("Window scrollY:", window.scrollY);  // Debugging: Check scroll position
-        
         if (window.scrollY > scrollThreshold) {
           header.classList.add('scrolled');
-          console.log("Scrolled class added.");
         } else {
           header.classList.remove('scrolled');
-          console.log("Scrolled class removed.");
         }
       });
     });

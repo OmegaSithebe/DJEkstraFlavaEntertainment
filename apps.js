@@ -8,14 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   // Scroll darkness affect
-  window.addEventListener('scroll', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header');
-    const scrollThreshold = 100;  
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    const hero = document.querySelector('.hero');
+    
+    // Add event listener for scroll
+    window.addEventListener('scroll', function () {
+      const scrollThreshold = 100;  // Scroll threshold for the effect
+      
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
   });
-
-  const scrollThreshold = 1;
